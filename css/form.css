@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formWrap .form {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0 0 24px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.formWrap .form .title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 40px 16px 0;
+    position: relative;
+}
+.formWrap .form .title span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 0 8px;
+    padding: 2px 8px;
+    background: #ba5042;
+}
+.formWrap .form .title .any {
+    background: #707070;
+}
+.formWrap .form .input {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+    width: 100%;
+    padding: 20px 24px;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+    background: #f8f8f8;
+}
+.formWrap .form textarea {
+    height: 300px;
+    resize: vertical;
+}
+.formWrap .form ::-moz-placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+.formWrap .form :-ms-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+.formWrap .form ::placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+.formWrap .form .box {
+    width: 100%;
+}
+.formWrap .form .box li {
+    margin: 0 0 16px 0;
+}
+.formWrap .form .box li input[type=checkbox],
+.formWrap .form .box li input[type=radio] {
+    display: none;
+}
+.formWrap .form .box li .customStyle {
+    font-size: 14px;
+    padding: 4px 24px 0 32px;
+    position: relative;
+    cursor: pointer;
+}
+.formWrap .form .box li .customStyle:before {
+    width: 20px;
+    height: 20px;
+    margin: -8px 0 0 0;
+    border: 1px solid #ccc;
+    left: 0;
+}
+.formWrap .form .box li .customStyle:after,
+.formWrap .form .box li .customStyle:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+}
+.formWrap .form .box li .customStyle::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    background: #d1d1d1;
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    opacity: 0;
+}
+.formWrap .form .box li input[type=checkbox]:checked + .customStyle::after,
+.formWrap .form .box li input[type=radio]:checked + .customStyle::after {
+    opacity: 1;
+}
+.formWrap .form .selectbox {
+    width: 100%;
+    position: relative;
+}
+.formWrap .form .selectbox select {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+    width: 100%;
+    padding: 20px 24px;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+    background: #f8f8f8;
+}
+.formWrap .form .selectbox::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 24px;
+    bottom: 0;
+    border-bottom: #333 2px solid;
+    border-right: #333 2px solid;
+    transform: rotate(45deg) translateY(-30%);
+}
+.formWrap .form .imageBox {
+    display: block;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+    width: 100%;
+    padding: 20px 24px;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+    background: #f8f8f8;
+    position: relative;
+}
+.formWrap .form .imageBox::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background-image: url(../img/upload.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    bottom: 0;
+}
+.formWrap .form .imageBox input {
+    display: none;
+}
+.formWrap .form .imageBox .thumbnailImage {
+    width: 100%;
+    height: auto;
+}
+.formWrap .form .imageBox2::after {
+    content: "";
+    background-image: none;
+}
+.formWrap .form:last-child {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+}
+@media screen and (min-width: 1024px) {
+    .formWrap .form {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 32px 0;
+        padding: 0 0 32px 0;
+    }
+    .formWrap .form .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 300px;
+        margin: 0 40px 0 0;
+    }
+    .formWrap .form .title span {
+        margin: 0;
+    }
+    .formWrap .form .box {
+        display: flex;
+        width: 100%;
+    }
+    .formWrap .form .box li {
+        margin: 0;
+    }
+}

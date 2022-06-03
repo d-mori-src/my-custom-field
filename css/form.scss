@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.formWrap {
+    .form {
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 0 0 24px 0;
+        border-bottom: 1px solid #e6e6e6;
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 40px 16px 0;
+            position: relative;
+            span {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1;
+                color: #fff;
+                margin: 0 0 0 8px;
+                padding: 2px 8px;
+                background: #ba5042;
+            }
+            .any {
+                background: #707070;
+            }
+        }
+        .input {
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 500;
+            width: 100%;
+            padding: 20px 24px;
+            border: 1px solid #e6e6e6;
+            border-radius: 0;
+            background: #f8f8f8;
+        }
+        textarea {
+            height: 300px;
+            resize: vertical;
+        }
+        ::placeholder {
+            font-weight: 100;
+            color: #ccc;
+        }
+        .box {
+            width: 100%;
+            li {
+                margin: 0 0 16px 0;
+                input[type=checkbox],
+                input[type=radio] {
+                    display: none;
+                }
+                .customStyle {
+                    font-size: 14px;
+                    padding: 4px 24px 0 32px;
+                    position: relative;
+                    cursor: pointer;
+                }
+                .customStyle:before {
+                    width: 20px;
+                    height: 20px;
+                    margin: -8px 0 0 0;
+                    border: 1px solid #ccc;
+                    left: 0;
+                }
+                .customStyle:after,
+                .customStyle:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                }
+                .customStyle::after {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    margin: auto;
+                    background: #d1d1d1;
+                    position: absolute;
+                    top: 5px;
+                    left: 3px;
+                    opacity: 0;
+                }
+                input[type=checkbox]:checked + .customStyle::after,
+                input[type=radio]:checked + .customStyle::after {
+                    opacity: 1;
+                }
+            }
+        }
+        .selectbox {
+            width: 100%;
+            position: relative;
+            select {
+                font-size: 14px;
+                line-height: 1.4;
+                font-weight: 500;
+                width: 100%;
+                padding: 20px 24px;
+                border: 1px solid #e6e6e6;
+                border-radius: 0;
+                background: #f8f8f8;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                right: 24px;
+                bottom: 0;
+                border-bottom:#333 2px solid;
+                border-right:#333 2px solid;
+                transform:rotate(45deg)translateY(-30%);
+            }
+        }
+        .imageBox {
+            display: block;
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 500;
+            width: 100%;
+            padding: 20px 24px;
+            border: 1px solid #e6e6e6;
+            border-radius: 0;
+            background: #f8f8f8;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin: auto;
+                background-image: url(../img/upload.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                right: 16px;
+                bottom: 0;
+            }
+            input {
+                display: none;
+            }
+            .thumbnailImage {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .imageBox2 {
+            &::after {
+                content: "";
+                background-image: none;
+            }
+        }
+        &:last-child {
+            margin: 0;
+            padding: 0;
+            border-bottom: none;
+        }
+    }
+    @media screen and (min-width:1024px) {
+        .form {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 32px 0;
+            padding: 0 0 32px 0;
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 300px;
+                margin: 0 40px 0 0;
+                span {
+                    margin: 0;
+                }
+            }
+            .box {
+                display: flex;
+                width: 100%;
+                li {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
